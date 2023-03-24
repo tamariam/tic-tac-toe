@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
       type="image/png"
@@ -11,34 +11,81 @@
       href="./assets/favicon-32x32.png"
     />
 
-    <link rel="stlesheet" href="style.css" />
     <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
   <body>
-    <!-- New game menu start -->
+    <section id="home">
+      <!-- New game menu start -->
+      <div class="xo">
+        <img class="x" src="assets/icon-x.svg" alt="x-svg" />
+        <img class="o" src="assets/icon-o.svg" alt="o-svg" />
+      </div>
+      <div class="pick-player-div">
+        <h2 class="pick-player typography">Pick player 1's mark</h2>
+        <div class="pick">
+          <button class="btn-xo" onclick="activeBtn('x-icon')">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 64 64"
+              xmlns="http://www.w3.org/2000/svg"
+              class="x-icon"
+            >
+              <path
+                d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z"
+                stroke="#A8A8A8"
+                stroke-width="1"
+                fill="#A8A8A8"
+              />
+            </svg>
+          </button>
+          <button class="btn-xo active-btn-xo" onclick="activeBtn('o-icon')">
+            <svg
+              width="33"
+              height="33"
+              viewBox="0 0 66 66"
+              xmlns="http://www.w3.org/2000/svg"
+              class="o-icon"
+            >
+              <path
+                d="M33 1c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C15.327 65 1 50.673 1 33 1 15.327 15.327 1 33 1Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
+                stroke="#1A2A33"
+                stroke-width="2"
+                fill="#A8A8A8"
+              />
+            </svg>
+          </button>
+        </div>
+        <h2 class="rule typography">Remember: X goes first</h2>
+      </div>
 
-    Pick player 1's mark Remember: X goes first New Game (vs CPU) New Game (vs
-    player)
-
+      <button class="one-player" onclick="newGameStart('CPU')">
+        New Game (vs CPU)
+      </button>
+      <button class="two-player" onclick="newGameStart('vs-player')">
+        New Game (vs player)
+      </button>
+    </section>
+    <section id="board">start</section>
     <!-- New game menu end -->
 
     <!-- Game board start -->
 
     <!-- x/o icon -->
-    turn X (You)
-    <!-- Your score -->
-    Ties
+    <!-- turn X (You)
+      Your score
+       Ties -->
     <!-- Ties score -->
-    X (CPU)
-    <!-- CPU score -->
+    <!-- X (CPU)
+       CPU score -->
 
-    Oh no, you lost You won! Player
-    <!-- 1/2 -->
-    wins!
+    <!-- Oh no, you lost You won! Player
+      < 1/2 -->
+    <!-- wins! -->
 
     <!-- x/o icon -->
-    takes the round Round tied Restart game? Quit Next round No, cancel Yes,
-    restart
+    <!-- takes the round Round tied Restart game? Quit Next round No, cancel Yes,
+      restart -->
 
     <!-- Game board end -->
 
